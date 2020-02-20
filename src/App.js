@@ -1,5 +1,5 @@
 import React from 'react';
-import APODCard from './components/APODContainer/APODCard.jsx';
+import ApodCard from './components/apodContainer/ApodCard.jsx';
 import './App.css';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app! Have fun!
       </p>
-      <APODCard />
+      <ApodCard />
     </div>
   );
 }
