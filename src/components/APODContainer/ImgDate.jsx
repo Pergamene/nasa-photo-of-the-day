@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Date = props => {
+const ImgDate = props => {
   const {date} = props;
 
   console.log('props in Date', props);
@@ -10,4 +10,4 @@ const Date = props => {
   );
 };
 
-export default Date;
+export default ImgDate;
