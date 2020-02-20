@@ -12,17 +12,21 @@ const APODCard = () => {
   useEffect(() => {
     fetchAPOD();
   }, []); 
-
+  
   const fetchAPOD = async () => {
     const result = APODService.apodFetch();
+    console.log(`fetchResult: ${result}`);
     setData(result);
+    console.log(`apiData: ${apiData}`);
   }
 
   return (
-    <React.Fragment>
+    // <React.Fragment>
+    <div>
       <h1>APOD</h1>
-      {apiData && <Title  title={apiData.title}/>}
-    </React.Fragment>
+      {apiData && <Title title={apiData.title}/>}
+    </div>
+    // </React.Fragment>
   );
 }
 

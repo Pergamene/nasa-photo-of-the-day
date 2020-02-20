@@ -1,11 +1,12 @@
-// import axios from 'axios';
+import axios from 'axios';
 
 class APODService {
   
   static apodFetch() {
-    // axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2020-02-19`)
-    fetch(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2020-02-19`)
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=TodeXakzh6TeQfkn2RS0r6qeWqfaQyyXhlZRa3JV&date=2020-02-19`)
+    // fetch(`https://api.nasa.gov/planetary/apod?api_key=TodeXakzh6TeQfkn2RS0r6qeWqfaQyyXhlZRa3JV&date=2020-02-19`)
       .then(response => {
+        console.log('apodFetch: ', response.data);
         return response.data;
       })
       .catch(error => {
