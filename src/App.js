@@ -1,14 +1,12 @@
 import React from 'react';
+import Header from './components/Header/Header.jsx';
 import ApodCard from './components/apodContainer/ApodCard.jsx';
 import './App.css';
 
 function App() {
   return (
     <div className='App'>
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun!
-      </p>
+      <Header />
       <ApodCard />
     </div>
   );

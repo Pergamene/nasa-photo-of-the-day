@@ -27,7 +27,7 @@ const ApodCard = () => {
   const pickDate = date => {
     setDate(date);
     setDateStr(formatDate(date));
-    setUrl(baseUrl.slice() + dateStr);
+    setUrl(baseUrl + dateStr);
   }
 
   const formatDate = date => {
@@ -39,12 +39,11 @@ const ApodCard = () => {
 
   return (
     <Fragment>
-      <h1>APOD</h1>
       {apiData && <Title title={apiData.title} /> }
       {apiData && <ImgDate date={apiData.date} /> }
-      <DatePicker selected={date} onChange={pickDate} />
       {apiData && <Image url={apiData.url} title={apiData.title} /> }
       {apiData && <Explanation explanation={apiData.explanation} /> }
+      <DatePicker selected={date} onChange={pickDate} />
     </Fragment>
   );
 };
