@@ -1,9 +1,19 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+
 import logo from '../../images/logo.png';
 
+const useStyles = makeStyles({
+  root: {
+    marginTop: '20px',
+  },
+});
+
 const Header = () => {
+  const classes = useStyles();
+
   return (
-    <img src={logo} alt="nasa apod" />
+    <img className={ classes.root } src={ logo } alt="nasa apod" />
   );
 };
 

@@ -1,12 +1,13 @@
-import React, {Fragment, useState, useEffect} from 'react';
-import DatePicker from 'react-datepicker';
+import React, { Fragment, useState, useEffect } from 'react';
+
 import ApodService from '../../services/ApodService.js';
 import Title from './Title.jsx';
 import Image from './Image.jsx';
 import Video from './Video.jsx';
 import Explanation from './Explanation.jsx';
 import ImgDate from './ImgDate.jsx';
-//import CSS
+
+import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 const ApodCard = () => {
@@ -40,11 +41,11 @@ const ApodCard = () => {
 
   return (
     <Fragment>
-      {apiData && <Title title={apiData.title} /> }
-      {apiData && <ImgDate date={apiData.date} /> }
-      {apiData && (apiData.media_type === 'image' ? <Image url={apiData.url} title={apiData.title} /> : <Video url={apiData.url} title={apiData.title} />) }
-      {apiData && <Explanation explanation={apiData.explanation} /> }
-      <DatePicker selected={date} onChange={pickDate} />
+      { apiData && <Title title={ apiData.title } /> }
+      { apiData && (apiData.media_type === 'image' ? <Image url={ apiData.url } title={ apiData.title } /> : <Video url={ apiData.url } title={ apiData.title } />) }
+      { apiData && <ImgDate date={ apiData.date } /> }
+      <DatePicker selected={ date } onChange={ pickDate } />
+      { apiData && <Explanation explanation={ apiData.explanation } /> }
     </Fragment>
   );
 };
