@@ -3,6 +3,7 @@ import DatePicker from 'react-datepicker';
 import ApodService from '../../services/ApodService.js';
 import Title from './Title.jsx';
 import Image from './Image.jsx';
+import Video from './Video.jsx';
 import Explanation from './Explanation.jsx';
 import ImgDate from './ImgDate.jsx';
 //import CSS
@@ -41,7 +42,7 @@ const ApodCard = () => {
     <Fragment>
       {apiData && <Title title={apiData.title} /> }
       {apiData && <ImgDate date={apiData.date} /> }
-      {apiData && <Image url={apiData.url} title={apiData.title} /> }
+      {apiData && (apiData.media_type === 'image' ? <Image url={apiData.url} title={apiData.title} /> : <Video url={apiData.url} title={apiData.title} />) }
       {apiData && <Explanation explanation={apiData.explanation} /> }
       <DatePicker selected={date} onChange={pickDate} />
     </Fragment>
